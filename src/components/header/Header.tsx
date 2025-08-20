@@ -4,7 +4,7 @@ export const Header = () => {
     return (
         <>
             <header>
-                <h1>Pumpkin Shop</h1>
+                <h1>Pumpkin Brew</h1>
             </header>
         </>
     )
