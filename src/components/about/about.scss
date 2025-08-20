@@ -1,0 +1,24 @@
+section {
+    background-image: url('/cozy_chocolate_autumn.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .text-wrap {
+        backdrop-filter: blur(20px);
+
+        h2 {
+            font-family: 'merriweather';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px;
+
+            span {
+                font-family: 'pattaya', sans-serif;
+                font-weight: 100;
+            }
+        }
+    }
+}
