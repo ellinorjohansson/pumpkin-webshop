@@ -1,37 +1,126 @@
 section {
-  height: 100vh;
-  background-color: rgb(255, 209, 152);
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: clamp(4rem, 10vh, 8rem);
+  background: linear-gradient(135deg, #ffd198, #ffb97d);
+  gap: 6vw;
 
   .text-wrap {
-    margin-left: 300px;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideIn 1s ease-out forwards;
+    animation-delay: 0.3s;
+    margin-top: 90px;
 
     h2 {
-      font-family: "merriweather";
-      font-size: 3.5rem;
-      color: #452717;
+      font-family: "Merriweather", serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.2;
+      color: #2d160c;
+      margin-bottom: 16px;
 
       span {
-        font-family: "pattaya", sans-serif;
-        font-weight: 100;
-        margin-left: 4px;
+        display: block;
+        font-family: "Pattaya", sans-serif;
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 400;
+        color: #452717;
+        margin-top: 8px;
       }
     }
+
     p {
-      font-family: "merriweather";
-      color: #452717;
+      font-family: "Merriweather", serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.7;
+      color: #3c2412;
+      margin-top: 24px;
+    }
+
+    button {
+      margin-top: 22px;
+      padding: 10px 40px;
       font-size: 1.5rem;
-      max-width: 700px;
+      font-family: "Merriweather", serif;
+      background: #452717;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease, transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &:hover {
+        background: #2d160c;
+        transform: translateY(-2px);
+      }
+
+      .arrow {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
   img {
-    width: 500px;
+    width: clamp(250px, 30vw, 420px);
+    max-width: 100%;
     height: auto;
-    margin-right: 300px;
-    margin-bottom: 100px;
-    transform: rotate(10deg);
+    border-radius: 16px;
+    transform: rotate(4deg);
+    transition: transform 0.4s ease;
+
+    &:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: clamp(3rem, 8vh, 5rem) 1.5rem;
+    gap: 32px;
+
+    .text-wrap {
+      margin-top: 0;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      span {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+      }
+    }
+
+    img {
+      margin-top: 32px;
+      width: 80%;
+      transform: none;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
   }
 }
