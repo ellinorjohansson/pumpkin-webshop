@@ -1,0 +1,118 @@
+import { Product } from "../models/Product";
+import syrupOne from '/products-img/1.png';
+import syrupTwo from '/products-img/2.png';
+import syrupThree from '/products-img/3.png';
+import syrupFour from '/products-img/4.png';
+import syrupFive from '/products-img/5.png';
+import syrupSix from '/products-img/6.png';
+import syrupSeven from '/products-img/7.png';
+import syrupEight from '/products-img/8.png';
+import syrupNine from '/products-img/9.png';
+import syrupTeen from '/products-img/10.png';
+import syrupEleven from '/products-img/11.png';
+import syrupTwelve from '/products-img/12.png';
+import syrupThirteen from '/products-img/13.png';
+import syrupFourteen from '/products-img/14.png';
+
+
+
+export const productsDetail: Product[] = [
+    new Product(
+        1,
+        syrupOne,
+        'Syrup one with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        2,
+        syrupTwo,
+        'Syrup two with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        3,
+        syrupThree,
+        'Syrup three with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        4,
+        syrupFour,
+        'Syrup four with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        5,
+        syrupFive,
+        'Syrup five with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        6,
+        syrupSix,
+        'Syrup six with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        7,
+        syrupSeven,
+        'Syrup seven with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        8,
+        syrupEight,
+        'Syrup eight with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        9,
+        syrupNine,
+        'Syrup nine with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        10,
+        syrupTeen,
+        'Syrup teen with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        11,
+        syrupEleven,
+        'Syrup eleven with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        12,
+        syrupTwelve,
+        'Syrup twlve with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        13,
+        syrupThirteen,
+        'Syrup thirteen with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+    new Product(
+        14,
+        syrupFourteen,
+        'Syrup fourteen with taste of autumn',
+        'This is the description of this syrup',
+        159
+    ),
+]

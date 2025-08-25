@@ -73,7 +73,7 @@ section {
     }
   }
 
-  img {
+  .coffe-img {
     width: clamp(250px, 30vw, 420px);
     max-width: 100%;
     height: auto;
@@ -118,7 +118,7 @@ section {
       }
     }
 
-    img {
+    .coffe-img {
       margin-top: 32px;
       width: 80%;
       transform: none;
