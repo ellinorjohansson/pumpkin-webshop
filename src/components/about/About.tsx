@@ -1,4 +1,5 @@
 import './about.scss';
+import mug from '../../assets/coffemug.png';
 
 export const About = () => {
     return (
@@ -11,7 +12,7 @@ export const About = () => {
                         arrow_downward
                     </span></button>
                 </div>
-                <img className='coffe-img' src="/coffemug.png" alt="coffe mug with a splash" />
+                <img className='coffe-img' src={mug} alt="coffe mug with a splash" />
             </section>
         </>
     )
