@@ -6,22 +6,22 @@
   font-size: 3rem;
   padding: 70px 0;
   color: rgb(255, 209, 152);
+  font-family: "Merriweather", serif;
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
-  align-items: stretch;
   padding-bottom: 100px;
   background-color: #452717;
 
   .products-wrapper {
     text-align: center;
-    padding: 20px;
+    padding: 60px 20px;
     background-color: rgb(255, 228, 196);
     border-radius: 10px;
-    margin: 20px 40px 20px 40px;
+    margin: 40px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,17 +34,71 @@
       margin-top: auto;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.04);
       }
+    }
+
+    .p-name {
+      font-family: "Merriweather", serif;
     }
 
     .p-description {
       font-size: 1.3rem;
+      font-family: "Merriweather", serif;
     }
 
     .p-price {
       font-size: 1.3rem;
       margin-top: auto;
+      font-family: "Merriweather", serif;
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 1080px) {
+  .p-header {
+    font-size: 3rem;
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    .products-wrapper {
+      padding: 40px;
+      margin: 30px 50px;
+      .p-description {
+        font-size: 1.2rem;
+      }
+
+      .p-price {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .p-header {
+    
+    font-size: 2.8rem;
+    
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+
+    .products-wrapper {
+
+      .p-description {
+        font-size: 1.2rem;
+      }
+
+      .p-price {
+        font-size: 1.3rem;
+        margin-top: auto;
+      }
     }
   }
 }
