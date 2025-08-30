@@ -14,8 +14,9 @@ section {
     transform: translateY(40px);
     animation: slideIn 1s ease-out forwards;
     animation-delay: 0.3s;
+    padding-left: 80px;
 
-    .welcome-text{
+    .welcome-text {
       font-family: "Merriweather", serif;
       font-size: 3.6rem;
       line-height: 1.1;
@@ -111,7 +112,7 @@ section {
 // Tablet
 @media (max-width: 1024px) {
   section {
-    padding-top: 20vh;
+    padding: 20vh;
     text-align: center;
     min-height: 60vh;
 
@@ -120,17 +121,18 @@ section {
       display: flex;
       align-items: center;
       flex-direction: column;
+      padding: 0;
 
       .welcome-text {
-        font-size: 2rem;
-      }
-
-      span {
-        font-size: 1rem;
+        font-size: 2.7rem;
+        span {
+          font-size: 4.7rem;
+        }
       }
 
       p {
-        font-size: 1rem;
+        font-size: 1.3rem;
+        width: 100%;
       }
 
       .scroll-btn {
@@ -151,26 +153,27 @@ section {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    gap: 32px;
+    min-height: 40vh;
+    padding: 110px 50px;
 
     .text-wrap {
       margin-top: 0;
 
-      h2 {
+      .welcome-text {
         font-size: 2rem;
-      }
-
-      span {
-        font-size: 2.5rem;
+        span {
+          font-size: 3rem;
+        }
       }
 
       p {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
       button {
         padding: 15px 30px;
         font-size: 1.2rem;
+        margin-bottom: 90px;
       }
     }
   }
