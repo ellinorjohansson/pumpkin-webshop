@@ -6,7 +6,7 @@ export const Products = () => {
   return (
     <>
       <About/>
-      <h2 className='p-header'>Products</h2>
+      <h2 id='productsSectionScroll' className='p-header'>Products</h2>
       <div className="wrapper">
         {productsDetail.map((p) => (
           <div key={p.id} className="products-wrapper">

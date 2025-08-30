@@ -2,6 +2,14 @@ import './about.scss';
 import mug from '../../assets/coffemug.png';
 
 export const About = () => {
+
+  const handleScroll = () => {
+    const section = document.getElementById("productsSectionScroll");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <section className='about-section'>
@@ -17,7 +25,7 @@ export const About = () => {
             morning latte or create a café experience at home, we have the syrup
             that makes your cup unforgettable.
           </p>
-          <button className='scroll-btn'>
+          <button onClick={handleScroll} className='scroll-btn'>
             Scroll to shop{' '}
             <span className="material-symbols-outlined arrow">
               arrow_downward
