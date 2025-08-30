@@ -18,99 +18,99 @@ export const productsDetail: Product[] = [
     new Product(
         1,
         syrupOne,
-        'Syrup one with taste of autumn',
-        'This is the description of this syrup',
+        'Pumpkin Spice',
+        'Warm, spicy, autumn classic.',
         159
     ),
     new Product(
         2,
         syrupTwo,
-        'Syrup two with taste of autumn',
-        'This is the description of this syrup',
+        'Maple Spice',
+        'Sweet maple with cozy spice.',
         166
     ),
     new Product(
         3,
         syrupThree,
-        'Syrup three with taste of autumn',
-        'This is the description of this syrup',
+        'Salted Caramel',
+        'Rich caramel, hint of salt.',
         123
     ),
     new Product(
         4,
         syrupFour,
-        'Syrup four with taste of autumn',
-        'This is the description of this syrup',
+        'Hazelnut',
+        'Nutty, roasted, smooth sweetness.',
         186
     ),
     new Product(
         5,
         syrupFive,
-        'Syrup five with taste of autumn',
-        'This is the description of this syrup',
+        'Toasted Marshmallow',
+        'Sweet, smoky, campfire treat.',
         144
     ),
     new Product(
         6,
         syrupSix,
-        'Syrup six with taste of autumn',
-        'This is the description of this syrup',
+        'Brown Butter',
+        'Buttery, nutty, caramelized depth.',
         138
     ),
     new Product(
         7,
         syrupSeven,
-        'Syrup seven with taste of autumn',
-        'This is the description of this syrup',
+        'Chestnut Praline',
+        'Earthy, nutty, caramel-like notes.',
         175
     ),
     new Product(
         8,
         syrupEight,
-        'Syrup eight with taste of autumn',
-        'This is the description of this syrup',
+        'Apple Pie',
+        'Baked apple with cinnamon spice.',
         121
     ),
     new Product(
         9,
         syrupNine,
-        'Syrup nine with taste of autumn',
-        'This is the description of this syrup',
+        'Cinnamon Bun',
+        'Sweet dough, cinnamon, frosting vibes.',
         170
     ),
     new Product(
         10,
         syrupTeen,
-        'Syrup teen with taste of autumn',
-        'This is the description of this syrup',
+        'Gingerbread',
+        'Spicy-sweet, festive warmth.',
         145
     ),
     new Product(
         11,
         syrupEleven,
-        'Syrup eleven with taste of autumn',
-        'This is the description of this syrup',
+        'Pecan Pie',
+        'Sweet nutty, buttery dessert flavor.',
         152
     ),
     new Product(
         12,
         syrupTwelve,
-        'Syrup twlve with taste of autumn',
-        'This is the description of this syrup',
+        'Chai Tea',
+        'Spiced tea with cloves & cardamom.',
         183
     ),
     new Product(
         13,
         syrupThirteen,
-        'Syrup thirteen with taste of autumn',
-        'This is the description of this syrup',
+        'Butterscotch',
+        'Creamy caramel with buttery finish.',
         169
     ),
     new Product(
         14,
         syrupFourteen,
-        'Syrup fourteen with taste of autumn',
-        'This is the description of this syrup',
+        'Cranberry Spice',
+        'Tart cranberry with warm spices.',
         118
     ),
 ]
