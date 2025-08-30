@@ -1,4 +1,4 @@
-section {
+.about-section {
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -111,7 +111,7 @@ section {
 
 // Tablet
 @media (max-width: 1024px) {
-  section {
+  .about-section {
     padding: 20vh;
     text-align: center;
     min-height: 60vh;
@@ -149,7 +149,7 @@ section {
 
 // Mobile
 @media (max-width: 768px) {
-  section {
+  .about-section {
     flex-direction: column;
     text-align: center;
     align-items: center;

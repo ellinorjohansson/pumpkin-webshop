@@ -4,7 +4,7 @@ import mug from '../../assets/coffemug.png';
 export const About = () => {
   return (
     <>
-      <section>
+      <section className='about-section'>
         <div className="text-wrap">
           <h2 className='welcome-text'>
             Welcome to <span>Pumpkin Brew!</span>
