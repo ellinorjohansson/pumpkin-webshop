@@ -5,7 +5,7 @@ import { About } from '../../components/about/About';
 export const Products = () => {
   return (
     <>
-      <About/>
+      <About />
       <h2 id='productsSectionScroll' className='p-header'>Products</h2>
       <div className="wrapper">
         {productsDetail.map((p) => (
@@ -14,6 +14,12 @@ export const Products = () => {
             <h2 className='p-name'>{p.name}</h2>
             <p className="p-description">{p.description}</p>
             <span className="p-price">{p.price} SEK</span>
+            <div className='inc-dec-wrapper'>
+              <button className='incr-decr-btn'>+</button>
+              <span className='count'>1</span>
+              <button className='incr-decr-btn'>-</button>
+            </div>
+            <button className='add-product-btn'>Add product</button>
           </div>
         ))}
       </div>
