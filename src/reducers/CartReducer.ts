@@ -1,3 +1,4 @@
+import { saveCartToLocalStorage } from "../helpers/Ls";
 import type { CartItem } from "../models/CartItem";
 import type { Product } from "../models/Product";
 
@@ -31,10 +32,18 @@ export const CartReducer = (cart: CartItem[], action: CartAction) => {
                 });
             }
 
-            const CartActionTypes.REMOVED: {
-                const returnValue = cart.filter(
+            const returnValue = [...cart, { product: productToAdd, amount: 1 }];
+            saveCartToLocalStorage(JSON.stringify(returnValue));
+
+            return returnValue;
+        }
+
+        case CartActionTypes.REMOVED: {
+            const returnValue = cart.filter(
                 (ci) => ci.product.id !== +action.payload,
             );
+            saveCartToLocalStorage(JSON.stringify(returnValue));
+
             return returnValue;
         }
 
@@ -47,6 +56,8 @@ export const CartReducer = (cart: CartItem[], action: CartAction) => {
                 }
                 return ci;
             });
+            saveCartToLocalStorage(JSON.stringify(returnValue));
+
             return returnValue;
         }
 
@@ -59,6 +70,8 @@ export const CartReducer = (cart: CartItem[], action: CartAction) => {
                 }
                 return ci;
             });
+            saveCartToLocalStorage(JSON.stringify(returnValue));
+
             return returnValue;
         }
         default: return cart;
