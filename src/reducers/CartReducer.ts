@@ -17,26 +17,29 @@ export type CartAction = {
 export const CartReducer = (cart: CartItem[], action: CartAction) => {
     switch (action.type) {
         case CartActionTypes.ADDED: {
-            const productToAdd: Product = JSON.parse(action.payload);
+            const productWithAmount = JSON.parse(action.payload);
+            const productToAdd: Product = { ...productWithAmount };
+            const amount = productWithAmount.amount || 1;
 
             const foundCartItem = cart.find(
                 (ci) => ci.product.id === productToAdd.id,
             );
 
+            let returnValue;
             if (foundCartItem) {
-                return cart.map((ci) => {
-                    if (ci.product.id === foundCartItem.product.id) {
-                        return { ...ci, amount: ci.amount + 1 };
-                    }
-                    return ci;
-                });
+                returnValue = cart.map((ci) =>
+                    ci.product.id === foundCartItem.product.id
+                        ? { ...ci, amount: ci.amount + amount }
+                        : ci
+                );
+            } else {
+                returnValue = [...cart, { product: productToAdd, amount }];
             }
 
-            const returnValue = [...cart, { product: productToAdd, amount: 1 }];
             saveCartToLocalStorage(JSON.stringify(returnValue));
-
             return returnValue;
         }
+
 
         case CartActionTypes.REMOVED: {
             const returnValue = cart.filter(
