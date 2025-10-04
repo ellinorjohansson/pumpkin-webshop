@@ -5,6 +5,30 @@
   flex-direction: column;
   align-items: center;
 
+  .back-btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%; 
+    margin-bottom: 20px;
+
+    .back-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      font-family: "Merriweather", serif;
+      color: rgb(255, 228, 196);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      .back-icon {
+        font-size: 3rem;
+      }
+    }
+  }
+
   .empty-cart {
     color: rgb(255, 228, 196);
     font-family: "Merriweather", serif;
@@ -31,6 +55,7 @@
       font-family: "Merriweather", serif;
       font-size: 1.3rem;
       color: #452717;
+      gap: 15px;
 
       .product-name {
         flex: 1;
@@ -59,7 +84,7 @@
 
         &.remove {
           background-color: #a83232;
-          margin-left: 80px;
+          margin-left: 20px;
           &:hover {
             background-color: #8b2424;
           }
@@ -74,6 +99,7 @@
   padding: 60px 20px;
   display: flex;
   justify-content: center;
+  width: 100%;
 
   form {
     background-color: rgb(255, 228, 196);
@@ -139,22 +165,52 @@
   }
 }
 
-// Tablet
+/* Tablet */
 @media (max-width: 1080px) {
   .cart-wrapper ul li {
     font-size: 1.1rem;
     flex-direction: column;
-    gap: 15px;
+    align-items: flex-start; 
+    gap: 10px;
+
+    .product-name {
+      text-align: left;
+      flex: unset;
+      width: 100%;
+    }
+
+    button.remove {
+      margin-left: 0;
+      align-self: flex-end;
+    }
   }
 }
 
-// Mobile
+/* Mobile */
 @media (max-width: 768px) {
   .cart-wrapper {
-    padding: 40px 10px;
+    padding: 30px 10px;
+  }
+
+  .back-btn-wrapper .back-btn {
+    font-size: 1.5rem;
+
+    .back-icon {
+      font-size: 2.2rem;
+    }
   }
 
   .form-wrapper form {
     padding: 20px;
+    gap: 15px;
+
+    label h2 {
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      font-size: 1rem;
+      padding: 12px;
+    }
   }
 }

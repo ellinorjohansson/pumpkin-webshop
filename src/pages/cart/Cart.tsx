@@ -2,13 +2,20 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import { CartActionTypes } from "../../reducers/CartReducer";
 import './cart.scss';
+import { useNavigate } from "react-router";
 
 export const Cart = () => {
   const { cart, dispatch } = useContext(CartContext);
+  const navigate = useNavigate();
 
   return (
     <>
       <section className="cart-wrapper">
+        <div className="back-btn-wrapper">
+          <button className="back-btn" onClick={() => navigate('/')}><span className="material-symbols-outlined back-icon">
+            chevron_backward
+          </span>Back</button>
+        </div>
         {cart.length === 0 ? (
           <p className="empty-cart">Cart empty</p>
         ) : (
